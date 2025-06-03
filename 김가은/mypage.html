@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이페이지 | cosinfo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+  <!-- 상단 바 -->
+  <div class="menu-bar-wrap">
+    <div class="menu-bar">
+      <h3>cosinfo</h3>
+      <div class="menu-bar-inner">
+        <a href="#">마이 페이지</a>
+        <a href="#">로그아웃</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 프로필 정보 -->
+  <section class="profile-section">
+    <i class="fa-solid fa-user fa-3x"></i>
+    <p class="greeting" id="user-greeting">안녕하세요, 사용자님</p>
+    <p class="email" id="user-email">useremail@gmail.com</p>
+    <div class="profile-buttons">
+      <button id="bookmark-tab" class="active">북마크</button>
+      <button id="edit-tab">정보 수정</button>
+    </div>
+  </section>
+
+  <!-- 북마크 카드 -->
+  <section class="card-section" id="card-section"></section>
+    <!-- JS에서 카드가 자동으로 들어올 예정 -->
+  </section>
+  <!-- 북마크 카드 팝업 -->
+  <div class="modal-overlay" id="modal" style="display: none;">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <h3 id="modal-title">성분명</h3>
+      <p id="modal-description">성분 설명</p>
+    </div>
+  </div>
+
+  <!-- 정보 수정 폼 (초기엔 숨김 처리) -->
+  <section class="edit-section" style="display: none;">
+    <form>
+      <h3>정보 수정</h3>
+      <label>사용자 이름</label>
+      <input type="text" name="username" /><br /><br />
+      <label>사용자 아이디</label>
+      <input type="text" name="user_id" /><br /><br />
+      <label>비밀번호</label><br />
+      <input type="password" name="password" /><br /><br />
+      <label>이메일</label><br />
+      <input type="email" name="email" /><br /><br />
+      <button type="submit">저장</button>
+    </form>
+  </section>
+  <script src="mypage.js"></script>
+</body>
+</html>
